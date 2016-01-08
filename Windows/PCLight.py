@@ -17,7 +17,7 @@ Strip = Controller()
 count = 0
 rainbowTimer = millis()
 
-while(True):
+while(True): #should make these automated with a file and save them everytime and maybe make a GUI
 	if(isRunning("VLC")):
 		Strip.setAll(Color(255, 50, 0))
 	elif(isRunning("Mozilla Firefox")):
@@ -25,7 +25,7 @@ while(True):
 	elif(isRunning("Heroes of the Storm")): # Add fading and stuff?
 		Strip.setAll(Color(50, 0, 255))
 	else:
-		if(millis() - rainbowTimer >= 100):
+		if(millis() - rainbowTimer >= 100): # Should move to a thread or something
 			Strip.rainbow(count)
 			count += 1
 			if(count == 5):

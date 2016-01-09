@@ -40,11 +40,19 @@ class Controller:
 			self.sendPixel(i, self.Buffer[i])
 
 	def setAll(self, color):
+		self.checkColor(color)
 		for i in range(0, self.LEDCount):
 			self.Buffer[i] = color
 
 	def clearAll(self):
 		self.ser.write("251658240\n"); # Sending char 'C' clears all
+
+	def checkColor(self, color):
+		if(color.R > 255 or color.G > 255 or color.B > 255):
+			raise "Color must be less then 255"
+
+		if(color.R < 0 or color.G < 0 or color.B < 0):
+			raise "Color must be bigger then 0"
 
 	def rainbowOrder(self, position):
 		result = Color()

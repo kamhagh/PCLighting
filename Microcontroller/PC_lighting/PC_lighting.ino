@@ -2,7 +2,7 @@
 #include "WS2812_Definitions.h"
 
 #define PIN 4
-#define LED_COUNT 5
+#define LED_COUNT 6
 
 struct pixel {
   int R = 0;

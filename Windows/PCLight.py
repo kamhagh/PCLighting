@@ -12,24 +12,26 @@ def isRunning(process_name):
 	return process_name in foregroundWindow
 
 Strip = Controller()
-effect = Effects(Strip, 5)
+effect = Effects(Strip, 6)
 
 rainbowTimer = effect.millis()
 count = 0
 
 while(True): #should make these automated with a file and save them everytime and maybe make a GUI
+	if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something
+		Strip.rainbow(count)
+		count += 1
+		if(count == 6):
+			count = 0
+		rainbowTimer = effect.millis()
+
 	if(isRunning("VLC")):
-		Strip.setAll(Color(255, 50, 0))
+		Strip.setPixel(5, Color(255, 50, 0))
 	elif(isRunning("Mozilla Firefox")):
-		Strip.setAll(Color(0, 50, 255))
+		Strip.setPixel(5, Color(0, 50, 255))
 	elif(isRunning("Heroes of the Storm")): # Add fading and stuff?
 		effect.fade(Color(50, 0, 255), 4000)
 	else:
-		if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something
-			Strip.rainbow(count)
-			count += 1
-			if(count == 5):
-				count = 0
-			rainbowTimer = effect.millis()
-	time.sleep(0.01)
+		Strip.setPixel(5, Color())
 	Strip.sendBuffer()
+	time.sleep(0.01)

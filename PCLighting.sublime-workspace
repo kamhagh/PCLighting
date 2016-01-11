@@ -1,0 +1,509 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getB"
+			],
+			[
+				"set",
+				"setB"
+			],
+			[
+				"g",
+				"getA"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"Serial",
+				"SerialNumber"
+			],
+			[
+				"LED",
+				"LEDCount"
+			],
+			[
+				"b",
+				"Blue"
+			],
+			[
+				"t",
+				"toset"
+			],
+			[
+				"clea",
+				"clearAll"
+			],
+			[
+				"pi",
+				"pixel"
+			],
+			[
+				"l",
+				"little"
+			],
+			[
+				"last",
+				"lastPixels"
+			],
+			[
+				"pixel",
+				"Pixel"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"ADC",
+				"adcval"
+			],
+			[
+				"in",
+				"inc	#include \"…\""
+			],
+			[
+				"TCC",
+				"TCCR1A"
+			],
+			[
+				"delay",
+				"_delay_ms"
+			],
+			[
+				"v",
+				"vertices"
+			],
+			[
+				"p",
+				"push_back"
+			],
+			[
+				"ot",
+				"out_normals"
+			],
+			[
+				"Strin",
+				"StringToVec"
+			],
+			[
+				"out_",
+				"out_vertices"
+			],
+			[
+				"glBind",
+				"glBindBuffer"
+			],
+			[
+				"VAO",
+				"lightVAO"
+			],
+			[
+				"glge",
+				"glGenVertexArrays"
+			],
+			[
+				"proj",
+				"projLoc"
+			],
+			[
+				"sha",
+				"shader_bulb"
+			],
+			[
+				"shader_",
+				"shader_container"
+			],
+			[
+				"GLFW",
+				"GLFW_KEY_S"
+			],
+			[
+				"GLFW_KE",
+				"GLFW_KEY_W"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"n",
+				"nullptr"
+			],
+			[
+				"SOIL",
+				"SOIL_LOAD_RGB"
+			],
+			[
+				"SOI",
+				"SOIL_load_image"
+			],
+			[
+				"of",
+				"offsetY"
+			],
+			[
+				"offset",
+				"offsetYUniform"
+			],
+			[
+				"GL",
+				"GL_FRAGMENT_SHADER"
+			],
+			[
+				"Vertex",
+				"GL_VERTEX_SHADER"
+			],
+			[
+				"freat",
+				"fragmentCode"
+			],
+			[
+				"frag",
+				"fragmentShader"
+			],
+			[
+				"vertex",
+				"vertexCode"
+			],
+			[
+				"framge",
+				"fragmentShader1"
+			],
+			[
+				"shaderProgra",
+				"shaderProgram1"
+			],
+			[
+				"shaderp",
+				"shaderProgram1"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 328.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"fold",
+				"Project: Add Folder"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 417.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/k/Desktop/PCLighting"
+	],
+	"file_history":
+	[
+		"/home/k/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/k/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/k/Desktop/Lighting.pyc",
+		"/home/k/Desktop/PCLight.py",
+		"/media/k/Linux/Projects/AVR/ATMega32/Blinky/flash.elf",
+		"/media/k/Linux/Projects/AVR/ATMega32/Blinky/compile.sh",
+		"/media/k/Linux/Projects/AVR/ATMega32/Blinky/compile.sh~",
+		"/media/k/10F019F8F019E4AE/LightPC/PCLighting/Linux/Effects.py",
+		"/media/k/10F019F8F019E4AE/LightPC/PCLighting/Linux/Lighting.py",
+		"/media/k/10F019F8F019E4AE/LightPC/PCLighting/Linux/PCLight.py",
+		"/home/k/Desktop/Lighting.py",
+		"/media/k/Linux/Projects/C++/WaveFront/main.cpp",
+		"/media/k/Linux/Projects/C++/Threading/main.cpp",
+		"/home/k/Desktop/A.cpp",
+		"/media/k/10F019F8F019E4AE/PC_lighting/Adafruit_NeoPixel.cpp",
+		"/home/k/Desktop/test.py",
+		"/media/k/10F019F8F019E4AE/PC_lighting/Adafruit_NeoPixel.h",
+		"/media/k/10F019F8F019E4AE/PC_lighting/PC.h",
+		"/media/k/10F019F8F019E4AE/PC_lighting/PC.cpp",
+		"/home/k/Desktop/OpenGL-Test/mandelbrot.cpp",
+		"/media/k/Linux/Projects/AVR/ATTiny13/Blinky/main.c",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/blah.cpp",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Shader.h",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/main.cpp",
+		"/media/k/Linux/Projects/C++/OpenCV/test.cpp",
+		"/home/k/Desktop/OpenGL-master/mandelbrot.cpp",
+		"/media/k/Linux/Projects/AVR/ATTiny13/Blinky/ADC.h",
+		"/media/k/Linux/Projects/AVR/ATMega32/PWM/PWM.h",
+		"/media/k/Linux/Projects/AVR/ATMega32/PWM/main.c",
+		"/media/k/Linux/Projects/AVR/ATMega32/Blinky/main.c",
+		"/home/k/Desktop/email.py",
+		"/home/k/Wave/test.obj",
+		"/media/k/Linux/Projects/C++/WaveFront/Sphere32.obj",
+		"/media/k/Linux/Projects/C++/WaveFront/Wave.h",
+		"/home/k/Downloads/Sphere32.obj",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/Shader.h",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/shaders/bulb.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/shaders/bulb.vs",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/shaders/container.vs",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/shaders/container.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shaders/coord.vs",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shaders/coord.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Camera.h",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Camreaclass.cpp",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/camera.h",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/camera.cpp",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/main.cpp",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shaders/default.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shaders/default.vs",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/main.c",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Shader.cpp",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shaders/default.shader",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shader/default.vs",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/shader/default.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Shaders/shader.frag",
+		"/media/k/Linux/Projects/OpenGL/Letsdoit/Shaders/shader.vs",
+		"/media/k/Linux/Projects/Python/multi proc/proc.py"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"255",
+			";\n",
+			");\n",
+			"LEDCount",
+			"Buffer",
+			"ser.write('255')",
+			"ser.write(255)",
+			"set",
+			"StringToVec",
+			"Program",
+			"program",
+			"PROGRAM",
+			"Program",
+			";\n",
+			"path/to/shaders/lamp.",
+			"path/to/shaders/lighting.",
+			"path/to/shaders/lamp",
+			"path/to/shaders/lighting",
+			"path/to/shaders/lamp",
+			"path/to/shaders/lighting",
+			"ourShader",
+			"path/to/shaders/shader",
+			"path/to/",
+			"EBO",
+			"indic",
+			"path/to/",
+			"position",
+			"shadershader",
+			"Program",
+			"std::",
+			"null",
+			"nullptr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self.LEDCount",
+			"self.Buffer",
+			"slf.Buffer",
+			"elf.Buffer",
+			"self.Buffer",
+			"ser.write(b'255')",
+			"ser.write('255')",
+			"ser",
+			"StringParse",
+			"shaders/bulb",
+			"shaders/container",
+			"shaders/bulb",
+			"shaders/container",
+			"shaders/bulb",
+			"shaders/container",
+			"shaders/bulb",
+			"shader_container",
+			"shaders/coord",
+			"",
+			"shader",
+			"shaderProgram",
+			"",
+			"NULL"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "/home/k/Desktop/PCLighting.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sha",
+				"/media/k/Linux/Projects/OpenGL/Letsdoit/Lighting/Shader.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 155.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

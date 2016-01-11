@@ -7,7 +7,8 @@ class Controller:
 
 	def __init__(self, SerialNumber = "SNR=75331333939351706072", LEDCount = 6):
 		self.SerialNumber = SerialNumber
-		self.ser = serial.Serial("COM4", 115200)
+		self.ser = 0
+		self.search()
 
 		self.LEDCount = LEDCount
 		self.Buffer = []

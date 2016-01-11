@@ -53,14 +53,5 @@ while(True): #should make these automated with a file and save them everytime an
 			else:
 				Strip.setPixel(5, i[2])
 
-
-	# if(isRunning("VLC")):
-	# 	Strip.setPixel(5, Color(255, 50, 0))
-	# elif(isRunning("Mozilla Firefox")):
-	# 	Strip.setPixel(5, Color(0, 50, 255))
-	# elif(isRunning("Heroes of the Storm")): # Add fading and stuff?
-	# 	effect.fade(Color(50, 0, 255), 4000)
-	# else:
-	# 	Strip.setPixel(5, Color())
 	Strip.sendBuffer()
 	time.sleep(0.01)

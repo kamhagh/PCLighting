@@ -16,11 +16,29 @@ def isRunning(process_name):
 	return process_name in tmp[:]
 	"""Will look for a solution soon, not much needed as i don't game in linux!"""
 
+def LoadProfiles():
+	lines = open("profile.txt").readlines()
+	for i in lines:
+		tmplist = []
+		tmp = i.split(":")
+		tmpColor = tmp[2].split(',')
+		toSetColor = Color(int(tmpColor[0]), int(tmpColor[1]), int(tmpColor[2]))
+		tmplist = [tmp[0], tmp[1], toSetColor]
+		Profiles.append(tmplist)
+		
+
+Profiles = []
+
+LoadProfiles()
+
 Strip = Controller()
-effect = Effects(Strip, 6)
+effect = Effects(Strip)
 
 rainbowTimer = effect.millis()
 count = 0
+
+Strip.setAll(Color(255,0,255))
+Strip.sendBuffer()
 
 while(True): #should make these automated with a file and save them everytime and maybe make a GUI
 	if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something
@@ -30,11 +48,16 @@ while(True): #should make these automated with a file and save them everytime an
 			count = 0
 		rainbowTimer = effect.millis()
 
-	if(isRunning("vlc")):
-		Strip.setPixel(5, Color(255, 50, 0))
-	elif(isRunning("firefox") or isRunning("chrome")):
-		Strip.setPixel(5, Color(0, 50, 255))
-	else:
-		Strip.setPixel(5, Color())
+	# Strip.setPixel(5, Color(255, 255, 255))
+	effect.fade(Color(255,255,255), 5000)
+
+	for i in Profiles:
+		if(isRunning(i[0])):
+			if(i[1] == 'F'):
+				effect.fade(i[2], 5000)
+			else:
+				Strip.setPixel(5, i[2])
+
+
 	Strip.sendBuffer()
 	time.sleep(0.01)

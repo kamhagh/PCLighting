@@ -6,7 +6,6 @@ import math
 from win32gui import GetWindowText, GetForegroundWindow
 from Lighting import Controller, Color
 from Effects import Effects
-from ConfigParser import SafeConfigParser
 
 def isRunning(process_name):
 	foregroundWindow = GetWindowText(GetForegroundWindow())
@@ -35,7 +34,7 @@ count = 0
 Strip.setAll(Color(255,0,255))
 Strip.sendBuffer()
 
-while(True): #should make these automated with a file and save them everytime and maybe make a GUI
+while(True):
 	if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something
 		Strip.rainbow(count)
 		count += 1
@@ -43,7 +42,6 @@ while(True): #should make these automated with a file and save them everytime an
 			count = 0
 		rainbowTimer = effect.millis()
 
-	# Strip.setPixel(5, Color(255, 255, 255))
 	effect.fade(Color(255,255,255), 5000)
 
 	for i in Profiles:

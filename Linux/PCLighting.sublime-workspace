@@ -212,7 +212,7 @@
 	"buffers":
 	[
 		{
-			"file": "Linux/PCLight.py",
+			"file": "PCLight.py",
 			"settings":
 			{
 				"buffer_size": 1460,
@@ -220,7 +220,7 @@
 			}
 		},
 		{
-			"file": "Windows/Lighting.py",
+			"file": "/home/k/Desktop/PCLighting/Windows/Lighting.py",
 			"settings":
 			{
 				"buffer_size": 2449,
@@ -228,7 +228,7 @@
 			}
 		},
 		{
-			"file": "Linux/Lighting.py",
+			"file": "Lighting.py",
 			"settings":
 			{
 				"buffer_size": 2288,
@@ -236,7 +236,7 @@
 			}
 		},
 		{
-			"file": "Windows/PCLight.py",
+			"file": "/home/k/Desktop/PCLighting/Windows/PCLight.py",
 			"settings":
 			{
 				"buffer_size": 1311,
@@ -553,7 +553,7 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Linux/PCLight.py",
+					"file": "PCLight.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -582,7 +582,7 @@
 				},
 				{
 					"buffer": 1,
-					"file": "Windows/Lighting.py",
+					"file": "/home/k/Desktop/PCLighting/Windows/Lighting.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -611,7 +611,7 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Linux/Lighting.py",
+					"file": "Lighting.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -640,7 +640,7 @@
 				},
 				{
 					"buffer": 3,
-					"file": "Windows/PCLight.py",
+					"file": "/home/k/Desktop/PCLighting/Windows/PCLight.py",
 					"semi_transient": false,
 					"settings":
 					{
@@ -743,7 +743,7 @@
 		"height": 110.0
 	},
 	"pinned_build_system": "",
-	"project": "/home/k/Desktop/PCLighting.sublime-project",
+	"project": "PCLighting.sublime-project",
 	"replace":
 	{
 		"height": 106.0

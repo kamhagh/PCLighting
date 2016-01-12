@@ -4,10 +4,10 @@ import serial
 class Controller:
 
 
-
+	"""You can find your serialNumber by printing ports in search functions"""
 	def __init__(self, SerialNumber = "SNR=75331333939351706072", LEDCount = 6):
 		self.SerialNumber = SerialNumber
-		self.ser = serial.Serial("COM4", 115200)
+		self.ser = serial.Serial("COM4", 115200) # Search doesn't work in windows, It's hard coded for now as it always connects to COM4 for me!
 
 		self.LEDCount = LEDCount
 		self.Buffer = []
@@ -15,9 +15,9 @@ class Controller:
 			self.Buffer.append(Color())
 
 	def search(self):
-		ports = list(serial.tools.list_ports.comports()) #Get all PORTS's info
+		ports = list(serial.tools.list_ports.comports()) #All the ports 
 
-		for p in ports: #check them all
+		for p in ports:
 			if self.SerialNumber in p[2]: #if the serial number matches
 				self.ser = serial.Serial(p[0], 115200) # P[0] is port name
 

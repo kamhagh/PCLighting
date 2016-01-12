@@ -1,10 +1,7 @@
 import serial
 import time
-import threading
 import sys
 import os
-import random
-import math
 from Lighting import Controller, Color
 from Effects import Effects
 
@@ -37,10 +34,7 @@ effect = Effects(Strip)
 rainbowTimer = effect.millis()
 count = 0
 
-Strip.setAll(Color(255,0,255))
-Strip.sendBuffer()
-
-while(True): #should make these automated with a file and save them everytime and maybe make a GUI
+while(True):
 	if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something
 		Strip.rainbow(count)
 		count += 1
@@ -48,7 +42,6 @@ while(True): #should make these automated with a file and save them everytime an
 			count = 0
 		rainbowTimer = effect.millis()
 
-	# Strip.setPixel(5, Color(255, 255, 255))
 	effect.fade(Color(255,255,255), 5000)
 
 	for i in Profiles:
@@ -57,7 +50,6 @@ while(True): #should make these automated with a file and save them everytime an
 				effect.fade(i[2], 5000)
 			else:
 				Strip.setPixel(5, i[2])
-
 
 	Strip.sendBuffer()
 	time.sleep(0.01)

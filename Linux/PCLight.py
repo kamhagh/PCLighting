@@ -6,12 +6,8 @@ from Lighting import Controller, Color
 from Effects import Effects
 
 def isRunning(process_name):
-	# foregroundWindow = GetWindowText(GetForegroundWindow())
-	# return process_name in foregroundWindow
-	"""not supported in Linux"""
-	tmp = os.popen("ps -Af").read()
-	return process_name in tmp[:]
-	"""Will look for a solution soon, not much needed as i don't game in linux!"""
+	focusWindow = os.popen("xdotool getwindowfocus getwindowname").read()
+	return process_name in focusWindow 
 
 def LoadProfiles():
 	lines = open("profile.txt").readlines()
@@ -47,7 +43,7 @@ while(True):
 	for i in Profiles:
 		if(isRunning(i[0])):
 			if(i[1] == 'F'):
-				effect.fade(i[2], 5000)
+				effect.fade(i[2], 5000) 
 			else:
 				Strip.setPixel(5, i[2])
 

@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"d",
+				"double"
+			],
+			[
+				"st",
+				"std::cout"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"test",
+				"testY"
+			],
+			[
+				"std",
+				"std::endl"
+			],
+			[
+				"arg",
+				"argv"
+			],
+			[
+				"te",
+				"testX"
+			],
+			[
 				"C",
 				"Color"
 			],
@@ -38,10 +66,6 @@
 			[
 				"g",
 				"getA"
-			],
-			[
-				"c",
-				"c"
 			],
 			[
 				"Serial",
@@ -212,44 +236,36 @@
 	"buffers":
 	[
 		{
-			"contents": "import serial\nimport time\nimport sys\nimport os\nfrom Lighting import Controller, Color\nfrom Effects import Effects\n\ndef isRunning(process_name):\n	# foregroundWindow = GetWindowText(GetForegroundWindow())\n	# return process_name in foregroundWindow\n	\"\"\"not supported in Linux\"\"\"\n	tmp = os.popen(\"ps -Af\").read()\n	return process_name in tmp[:]\n	\"\"\"Will look for a solution soon, not much needed as i don't game in linux!\"\"\"\n\ndef LoadProfiles():\n	lines = open(\"profile.txt\").readlines()\n	for i in lines:\n		tmplist = []\n		tmp = i.split(\":\")\n		tmpColor = tmp[2].split(',')\n		toSetColor = Color(int(tmpColor[0]), int(tmpColor[1]), int(tmpColor[2]))\n		tmplist = [tmp[0], tmp[1], toSetColor]\n		Profiles.append(tmplist)\n		\n\nProfiles = []\n\nLoadProfiles()\n\nStrip = Controller()\neffect = Effects(Strip)\n\nrainbowTimer = effect.millis()\ncount = 0\n\nwhile(True):\n	if(effect.millis() - rainbowTimer >= 100): # Should move to a thread or something\n		Strip.rainbow(count)\n		count += 1\n		if(count == 6):\n			count = 0\n		rainbowTimer = effect.millis()\n\n	Strip.setPixel(5, Color(255,0,255))\n\n	for i in Profiles:\n		if(isRunning(i[0])):\n			if(i[1] == 'F'):\n				effect.fade(i[2], 5000) \n			else:\n				Strip.setPixel(5, i[2])\n\n	Strip.sendBuffer()\n	time.sleep(0.01)",
-			"file": "PCLight.py",
-			"file_size": 1233,
-			"file_write_time": 130970919359897935,
+			"contents": "#include <iostream>\n#include <cstdlib>\n#include <math.h>\n#include <time.h>\n\ndouble Random()\n{\n	return ((double) rand() / (RAND_MAX));\n}\n\nint main(int argc, char const *argv[])\n{\n	int hits = 0, misses = 0;\n\n	srand(time(NULL));\n\n	if (argc < 2)\n	{\n		std::cout << \"Usage: \" << argv[0] << \" <Number of test>\" << std::endl;\n		return -1;\n	}\n\n	double testX, testY;\n	for (int i = 0; i != atoi(argv[1]); ++i)\n	{\n		testX = Random();\n		testY = Random();\n\n\n		double result;\n\n		result = pow(testX, 2) + pow(testY, 2);\n\n		if (result < 1)\n		{\n			hits++;\n		} else {\n			misses++;\n		}\n	}\n	if (misses == 0)\n	{\n		std::cout << \"misses = 0, quitting...\\n\" << std::endl;\n		return 0;\n	}\n	double pi = (double)hits/(hits+misses);\n	std::cout << \"hits: \" << hits << \" misses: \" << misses << std::endl;\n	std::cout << \"Number of hits/misses(PI): \" << 4 * pi << std::endl;\n\n	return 0;\n}",
+			"file": "/home/k/Desktop/montecarlo/main.cpp",
+			"file_size": 1013,
+			"file_write_time": 130970833212014343,
 			"settings":
 			{
-				"buffer_size": 1234,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Lighting.py",
-			"settings":
-			{
-				"buffer_size": 2479,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/k/Desktop/PCLighting/Windows/PCLight.py",
-			"settings":
-			{
-				"buffer_size": 1140,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/k/Desktop/PCLighting/Windows/Lighting.py",
-			"settings":
-			{
-				"buffer_size": 2449,
+				"buffer_size": 854,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
 		[
 			[
 				[
@@ -270,10 +286,42 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 368.0,
-		"last_filter": "pull",
+		"height": 133.0,
+		"last_filter": "qu",
 		"selected_items":
 		[
+			[
+				"qu",
+				"Git: Quick Commit"
+			],
+			[
+				"git q",
+				"Git: Quick Commit"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"run ",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"git:",
+				"Git: Init"
+			],
+			[
+				"git in",
+				"Git: Init"
+			],
 			[
 				"pull",
 				"Git: Pull"
@@ -335,20 +383,12 @@
 				"Git: Commit"
 			],
 			[
-				"git com",
-				"Git: Commit"
-			],
-			[
 				"git push",
 				"Git: Push Current Branch"
 			],
 			[
 				"branch",
 				"Git: Push Current Branch"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"ins",
@@ -403,10 +443,6 @@
 				"Git: Commit"
 			],
 			[
-				"git add",
-				"Git: Add All"
-			],
-			[
 				"git pul",
 				"Git: Pull"
 			],
@@ -448,15 +484,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/k/Desktop/PCLighting",
-		"/home/k/Desktop/PCLighting/Linux",
-		"/home/k/Desktop/PCLighting/Windows"
+		"/home/k/Desktop/montecarlo"
 	],
 	"file_history":
 	[
+		"/home/k/Desktop/PCLighting/Windows/Lighting.py",
+		"/home/k/Desktop/PCLighting/Windows/PCLight.py",
 		"/home/k/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/k/Desktop/PCLighting/Linux/Lighting.py",
 		"/home/k/Desktop/PCLighting/README.md",
 		"/home/k/Desktop/montecarlo/main.cpp",
+		"/home/k/Desktop/PCLighting/Linux/PCLight.py",
 		"/home/k/Desktop/PCLighting/Linux/Effects.py",
 		"/home/k/Desktop/PCLighting/Windows/Effects.py",
 		"/home/k/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
@@ -532,6 +570,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hit",
+			"miss",
 			"fade",
 			"millis",
 			"100",
@@ -613,124 +653,30 @@
 			[
 				{
 					"buffer": 0,
-					"file": "PCLight.py",
+					"file": "/home/k/Desktop/montecarlo/main.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1234,
+						"buffer_size": 854,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1158,
-								1158
+								646,
+								646
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 386.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Lighting.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2479,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								375,
-								375
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "/home/k/Desktop/PCLighting/Windows/PCLight.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1140,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								566,
-								566
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/k/Desktop/PCLighting/Windows/Lighting.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								770,
-								770
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -753,18 +699,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.541426168555,
 			1.0
 		],
 		"rows":
@@ -787,7 +726,7 @@
 		"height": 166.0
 	},
 	"pinned_build_system": "",
-	"project": "PCLighting.sublime-project",
+	"project": "montecarlo.sublime-project",
 	"replace":
 	{
 		"height": 106.0
@@ -817,12 +756,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 133.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 360.0
 	},
 	"selected_group": 0,
 	"settings":

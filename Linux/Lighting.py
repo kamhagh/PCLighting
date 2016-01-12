@@ -1,5 +1,6 @@
 import serial.tools.list_ports
 import serial
+import time
 
 class Controller:
 
@@ -16,11 +17,20 @@ class Controller:
 			self.Buffer.append(Color())
 
 	def search(self):
-		ports = list(serial.tools.list_ports.comports()) #Get all PORTS's info
+		arduinoPort = 0
+		
+		
+		for i in range(1,15):
+			ports = list(serial.tools.list_ports.comports()) #Get all PORTS's info
+			for p in ports: #check them all
+				if self.SerialNumber in p[2]: #if the serial number matches
+					arduinoPort = p[0]
+					break
+			time.sleep(0.2)
 
-		for p in ports: #check them all
-			if self.SerialNumber in p[2]: #if the serial number matches
-				self.ser = serial.Serial(p[0], 115200) # P[0] is port name
+		if(arduinoPort == 0):
+			raise ValueError("Couldn't find arduino")
+		self.ser = serial.Serial(arduinoPort, 115200) # P[0] is port name
 
 	def rainbow(self, startPosition):
 		rainbowScale = 192 / self.LEDCount

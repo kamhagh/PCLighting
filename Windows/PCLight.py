@@ -1,8 +1,5 @@
 import serial
 import time
-import threading
-import random
-import math
 from win32gui import GetWindowText, GetForegroundWindow
 from Lighting import Controller, Color
 from Effects import Effects

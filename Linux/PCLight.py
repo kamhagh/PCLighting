@@ -42,7 +42,7 @@ while(True):
 			count = 0
 		rainbowTimer = effect.millis()
 
-	effect.fade(Color(255,255,255), 5000)
+	Strip.setPixel(5, Color(255,0,255))
 
 	for i in Profiles:
 		if(isRunning(i[0])):

@@ -236,41 +236,48 @@
 	"buffers":
 	[
 		{
-			"file": "PCLight.py",
+			"contents": "#include \"mainwindow.h\"\n#include \"ui_mainwindow.h\"\n\nMainWindow::MainWindow(QWidget *parent) :\n    QMainWindow(parent),\n    ui(new Ui::MainWindow)\n{\n    ui->setupUi(this);\n}\n\nMainWindow::~MainWindow()\n{\n    delete ui;\n}\n",
+			"file": "/home/k/PCLight/mainwindow.cpp",
+			"file_size": 881,
+			"file_write_time": 130971541735360499,
 			"settings":
 			{
-				"buffer_size": 1267,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "profile.txt",
-			"settings":
-			{
-				"buffer_size": 164,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/k/PCLight/main.cpp",
-			"settings":
-			{
-				"buffer_size": 172,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Lighting.py",
-			"settings":
-			{
-				"buffer_size": 2562,
+				"buffer_size": 219,
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/Qt5.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/Qt5.sublime-build",
+					""
+				],
+				[
+					"Packages/User/Qt5.sublime-build",
+					"Qmake Project"
+				],
+				[
+					"Packages/User/Qt5.sublime-build",
+					"Qmake Clean"
+				]
+			],
+			[
+				"Packages/User/Qt5.sublime-build",
+				""
+			]
+		],
 		[
 			[
 				[
@@ -291,10 +298,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 368.0,
-		"last_filter": "git com",
+		"height": 133.0,
+		"last_filter": "qmake",
 		"selected_items":
 		[
+			[
+				"qmake",
+				"Build With: Qt5 - Qmake Project"
+			],
+			[
+				"build",
+				"Build With: Qt5 - Qmake Project"
+			],
 			[
 				"git com",
 				"Git: Commit"
@@ -477,14 +492,15 @@
 	},
 	"expanded_folders":
 	[
-		"/home/k/Desktop/PCLighting",
-		"/home/k/Desktop/PCLighting/Linux",
-		"/home/k/Desktop/PCLighting/Microcontroller",
-		"/home/k/Desktop/PCLighting/Microcontroller/PC_lighting",
-		"/home/k/Desktop/PCLighting/Windows"
+		"/home/k/PCLight"
 	],
 	"file_history":
 	[
+		"/home/k/.config/sublime-text-3/Packages/User/Qt5.sublime-build",
+		"/home/k/Desktop/PCLighting/Linux/Lighting.py",
+		"/home/k/PCLight/main.cpp",
+		"/home/k/Desktop/PCLighting/Linux/profile.txt",
+		"/home/k/Desktop/PCLighting/Linux/PCLight.py",
 		"/home/k/Desktop/PCLighting/Microcontroller/PC_lighting/PC_lighting.ino",
 		"/home/k/Desktop/PCLighting/Windows/Lighting.py",
 		"/home/k/Desktop/PCLighting/Windows/PCLight.py",
@@ -644,81 +660,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "PCLight.py",
-					"semi_transient": false,
+					"file": "/home/k/PCLight/mainwindow.cpp",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1267,
+						"buffer_size": 219,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								652,
-								652
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "profile.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								26
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/k/PCLight/main.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 172,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								219,
+								219
 							]
 						],
 						"settings":
@@ -730,35 +689,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Lighting.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2562,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								847,
-								847
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -808,7 +738,7 @@
 		"height": 166.0
 	},
 	"pinned_build_system": "",
-	"project": "PCLighting.sublime-project",
+	"project": "PClight.sublime-project",
 	"replace":
 	{
 		"height": 106.0

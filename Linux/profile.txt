@@ -3,4 +3,5 @@ VLC::255,0,0
 Heroes of the Storm::50,0,255
 Internet Download Manager::0,255,0
 Battle.net::25,0,255
-Sublime Text::255,50,0
+@K-Ubuntu::255,0,255
+Sublime::255,50,0

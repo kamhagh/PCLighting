@@ -36,7 +36,7 @@ void loop() {
      pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
      */
 
-    long hexval= PC_Receive(); // You sent: 0x01FF8C3C or, integer value,33524796
+    long hexval= PC_Receive();
     if(hexval == 251658240) {
       clearLEDs();
       leds.show();

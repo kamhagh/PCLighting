@@ -19,13 +19,16 @@ class Controller:
 	def search(self):
 		arduinoPort = 0
 		
-		
+		foundArduino = False
 		for i in range(1,15):
-			ports = list(serial.tools.list_ports.comports()) #Get all PORTS's info
-			for p in ports: #check them all
-				if self.SerialNumber in p[2]: #if the serial number matches
-					arduinoPort = p[0]
-					break
+			if(not foundArduino):
+				ports = list(serial.tools.list_ports.comports()) #Get all PORTS's info
+				for p in ports: #check them all
+					if self.SerialNumber in p[2]: #if the serial number matches
+						arduinoPort = p[0]
+						foundArduino = True
+			else:
+				break
 			time.sleep(0.2)
 
 		if(arduinoPort == 0):
